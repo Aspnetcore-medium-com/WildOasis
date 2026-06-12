@@ -1,0 +1,15 @@
+D:\udemy_netcore_course\Core\bin\Debug\net9.0\Core.deps.json
+D:\udemy_netcore_course\Core\bin\Debug\net9.0\Core.dll
+D:\udemy_netcore_course\Core\bin\Debug\net9.0\Core.pdb
+D:\udemy_netcore_course\Core\bin\Debug\net9.0\Domain.dll
+D:\udemy_netcore_course\Core\bin\Debug\net9.0\Domain.pdb
+D:\udemy_netcore_course\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
+D:\udemy_netcore_course\Core\obj\Debug\net9.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\udemy_netcore_course\Core\obj\Debug\net9.0\Core.AssemblyInfoInputs.cache
+D:\udemy_netcore_course\Core\obj\Debug\net9.0\Core.AssemblyInfo.cs
+D:\udemy_netcore_course\Core\obj\Debug\net9.0\Core.csproj.CoreCompileInputs.cache
+D:\udemy_netcore_course\Core\obj\Debug\net9.0\Core.csproj.Up2Date
+D:\udemy_netcore_course\Core\obj\Debug\net9.0\Core.dll
+D:\udemy_netcore_course\Core\obj\Debug\net9.0\refint\Core.dll
+D:\udemy_netcore_course\Core\obj\Debug\net9.0\Core.pdb
+D:\udemy_netcore_course\Core\obj\Debug\net9.0\ref\Core.dll

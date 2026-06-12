@@ -1,0 +1,11 @@
+D:\udemy_netcore_course\Domain\bin\Debug\net9.0\Domain.deps.json
+D:\udemy_netcore_course\Domain\bin\Debug\net9.0\Domain.dll
+D:\udemy_netcore_course\Domain\bin\Debug\net9.0\Domain.pdb
+D:\udemy_netcore_course\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\udemy_netcore_course\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+D:\udemy_netcore_course\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+D:\udemy_netcore_course\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+D:\udemy_netcore_course\Domain\obj\Debug\net9.0\Domain.dll
+D:\udemy_netcore_course\Domain\obj\Debug\net9.0\refint\Domain.dll
+D:\udemy_netcore_course\Domain\obj\Debug\net9.0\Domain.pdb
+D:\udemy_netcore_course\Domain\obj\Debug\net9.0\ref\Domain.dll
