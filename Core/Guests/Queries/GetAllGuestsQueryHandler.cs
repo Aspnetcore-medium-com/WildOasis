@@ -2,6 +2,7 @@
 using Core.Bookings.Dto;
 using Domain.Entities;
 using Domain.RespositroyContracts;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 

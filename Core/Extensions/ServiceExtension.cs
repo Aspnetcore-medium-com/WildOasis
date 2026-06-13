@@ -1,4 +1,5 @@
 ﻿using Core.Bookings.MappingProfiles;
+using Core.Settings.Profiles;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace Core.Extensions
                 config.AddProfile<BookingsProfile>();
                 config.AddProfile<CabinsProfile>();
                 config.AddProfile<GuestsProfile>();
+                config.AddProfile<SettingsProfile>();
             });
 
             services.AddMediatR(config => config.RegisterServicesFromAssembly(typeof(ServiceExtension).Assembly));

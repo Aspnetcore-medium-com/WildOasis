@@ -11,9 +11,9 @@ namespace Infra.Repositories
     /// <param name="applicationDBContext"></param>
     public class SettingsRepository(ApplicationDBContext applicationDBContext) : ISettingsRepository
     {
-        public async Task<IEnumerable<Setting>> GetAllSettingsAsync(CancellationToken cancellationToken = default)
+        public async Task<Setting> GetAllSettingsAsync(CancellationToken cancellationToken = default)
         {
-            IEnumerable<Setting> settings = await applicationDBContext.Settings.ToListAsync(cancellationToken);
+            Setting settings = await applicationDBContext.Settings.FirstOrDefaultAsync(cancellationToken);
             return settings;
         }
     }

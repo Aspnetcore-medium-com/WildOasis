@@ -5,7 +5,7 @@ using System;
 
 namespace Core.Settings.Queries
 {
-    public class GetAllSettingsQuery : IRequest<IEnumerable<SettingsResponseDto>>
+    public class GetAllSettingsQuery : IRequest<SettingsResponseDto>
     {
     }
 }

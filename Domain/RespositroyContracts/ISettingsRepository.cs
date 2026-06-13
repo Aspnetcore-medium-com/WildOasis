@@ -12,6 +12,6 @@ namespace Domain.RespositroyContracts
     /// </summary>
     public interface ISettingsRepository
     {
-        Task<IEnumerable<Setting>> GetAllSettingsAsync (CancellationToken cancellationToken = default);
+        Task<Setting> GetAllSettingsAsync (CancellationToken cancellationToken = default);
     }
 }
