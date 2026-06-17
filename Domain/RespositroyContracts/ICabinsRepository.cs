@@ -13,5 +13,12 @@ namespace Domain.RespositroyContracts
     public interface ICabinsRepository
     {
         Task<IEnumerable<Cabin>> GetAllCabinsAsync(CancellationToken cancellationToken = default);
+
+        Task<bool> CabinsExists(Guid cabinId, CancellationToken cancellationToken = default);
+
+        Task<bool> DeleteCabin(Guid cabinId, CancellationToken cancellationToken = default);
+
+        Task<Cabin?> GetCabinByIdAsync(Guid guid, CancellationToken cancellationToken = default);
+
     }
 }
