@@ -1,4 +1,5 @@
-﻿using Domain.RespositroyContracts;
+﻿using Domain.Exceptions.NotFound;
+using Domain.RespositroyContracts;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
@@ -11,7 +12,7 @@ namespace Core.Cabins.Commands
         {
             logger.LogInformation("Delete {CabinId} in {Function}", request.CabinId, nameof(Handle));
             var cabin = await cabinsRepository.GetCabinByIdAsync(request.CabinId);
-            if (cabin == null) { throw new KeyNotFoundException("Cabin - Not found Exception"); }
+            if (cabin == null) { throw new CabinNotfoundException(request.CabinId); }
             var deleted = await cabinsRepository.DeleteCabin(cabin.Id, cancellationToken);
             if (!deleted)
             {
