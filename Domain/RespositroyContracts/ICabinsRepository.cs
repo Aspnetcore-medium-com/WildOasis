@@ -20,5 +20,7 @@ namespace Domain.RespositroyContracts
 
         Task<Cabin?> GetCabinByIdAsync(Guid guid, CancellationToken cancellationToken = default);
 
+        Task<Cabin> CreateCabinAsync(Cabin cabin, CancellationToken cancellationToken = default);
+
     }
 }

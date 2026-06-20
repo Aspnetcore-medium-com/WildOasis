@@ -1,5 +1,7 @@
 ﻿using Core.Bookings.MappingProfiles;
+using Core.Cabins.Commands.Create.Validations;
 using Core.Settings.Profiles;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -24,6 +26,7 @@ namespace Core.Extensions
 
             services.AddMediatR(config => config.RegisterServicesFromAssembly(typeof(ServiceExtension).Assembly));
 
+            services.AddValidatorsFromAssemblyContaining<CreateCabinCommandValidator>();
 
             return services;
         }

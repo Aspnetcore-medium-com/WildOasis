@@ -45,5 +45,12 @@ namespace Infra.Repositories
             var cabin = await applicationDBContext.Cabins.FirstOrDefaultAsync(c => c.Id == guid,cancellationToken);
             return cabin;
         }
+
+        public async Task<Cabin> CreateCabinAsync(Cabin cabin, CancellationToken cancellationToken = default)
+        {
+            await applicationDBContext.Cabins.AddAsync(cabin,cancellationToken);
+            await applicationDBContext.SaveChangesAsync();
+            return cabin;
+        }
     }
 }
