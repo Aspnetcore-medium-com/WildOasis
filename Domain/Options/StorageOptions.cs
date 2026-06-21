@@ -9,5 +9,6 @@ namespace Domain.Options
     public class StorageOptions
     {
         public string BaseUrl { get; set; } = string.Empty;
+        public string Container { get; set; } = string.Empty;
     }
 }

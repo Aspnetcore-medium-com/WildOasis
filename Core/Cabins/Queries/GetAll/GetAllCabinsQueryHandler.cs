@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
 
-namespace Core.Cabins.Queries
+namespace Core.Cabins.Queries.GetAll
 {
     public class GetAllCabinsQueryHandler(ILogger<GetAllCabinsQueryHandler> logger,ICabinsRepository cabinsRepository, IMapper mapper, IOptions<StorageOptions> options) : IRequestHandler<GetAllCabinsQuery, IEnumerable<CabinResponseDto>>
     {

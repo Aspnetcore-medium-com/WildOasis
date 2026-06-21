@@ -1,6 +1,10 @@
-﻿using Domain.RespositroyContracts;
+﻿using Azure.Storage.Blobs;
+using Core.ServiceContracts;
+using Domain.RespositroyContracts;
 using Infra.Repositories;
+using Infra.Storage;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Azure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,6 +20,8 @@ namespace Infra.Extensions
             services.AddScoped<ICabinsRepository,CabinsRepository>();
             services.AddScoped<IGuestsRepository, GuestsRepository>();
             services.AddScoped<ISettingsRepository, SettingsRepository>();
+            services.AddScoped<IBlobStorageService, BlobStorageService>();
+            services.AddSingleton(sp => new BlobServiceClient(configuration.GetConnectionString("Storage")));
             return services;
         }
     }
