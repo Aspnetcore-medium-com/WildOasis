@@ -11,6 +11,11 @@ namespace Infra.Storage
     {
         public async Task<string> UploadBlobAsync(IFormFile file, CancellationToken cancellationToken = default)
         {
+            ArgumentNullException.ThrowIfNull(file);
+            if ( file.Length == 0)
+            {
+                throw new ArgumentNullException("File is empty", nameof(file));
+            }
             // get the continer
             var container = blobServiceClient.GetBlobContainerClient(options.Value.Container);
             // create file name
@@ -23,6 +28,19 @@ namespace Infra.Storage
             await blobClient.UploadAsync(stream,overwrite: false,cancellationToken);
 
             return fileName;
+
+        }
+
+        public async Task DeleteAsync(string fileName, CancellationToken cancellationToken = default)
+        {
+            ArgumentNullException.ThrowIfNullOrWhiteSpace(fileName);
+
+            // Get the container
+            var container = blobServiceClient.GetBlobContainerClient(options.Value.Container);
+            // Get the blob
+            var blobClient = container.GetBlobClient(fileName);
+
+            await blobClient.DeleteIfExistsAsync(Azure.Storage.Blobs.Models.DeleteSnapshotsOption.None, null, cancellationToken);
 
         }
     }

@@ -10,5 +10,7 @@ namespace Core.ServiceContracts
     public interface IBlobStorageService
     {
         Task<string> UploadBlobAsync(IFormFile file, CancellationToken cancellationToken = default);
+
+        Task DeleteAsync(string fileName, CancellationToken cancellationToken = default);
     }
 }

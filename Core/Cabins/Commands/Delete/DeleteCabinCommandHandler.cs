@@ -1,4 +1,5 @@
-﻿using Domain.Exceptions.NotFound;
+﻿using Core.ServiceContracts;
+using Domain.Exceptions.NotFound;
 using Domain.RespositroyContracts;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -6,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Core.Cabins.Commands
 {
-    public class DeleteCabinCommandHandler(ILogger<DeleteCabinCommandHandler> logger, ICabinsRepository cabinsRepository) : IRequestHandler<DeleteCabinCommand>
+    public class DeleteCabinCommandHandler(ILogger<DeleteCabinCommandHandler> logger,IBlobStorageService blobStorageService, ICabinsRepository cabinsRepository) : IRequestHandler<DeleteCabinCommand>
     {
         public async Task Handle(DeleteCabinCommand request, CancellationToken cancellationToken)
         {
@@ -18,6 +19,7 @@ namespace Core.Cabins.Commands
             {
                 throw new KeyNotFoundException("Cabin - delete failed");
             }
+            await blobStorageService.DeleteAsync(cabin.Image, cancellationToken);
         }
     }
 }
